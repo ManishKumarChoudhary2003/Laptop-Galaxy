@@ -124,6 +124,7 @@ const ProductCard = () => {
     <div>
       <div className={classes.content}>
       <h1>Products</h1> 
+      <input type="search" placeholder="Search Your Laptop" />
       </div>
       <hr />
       <div className={classes.card_content}>

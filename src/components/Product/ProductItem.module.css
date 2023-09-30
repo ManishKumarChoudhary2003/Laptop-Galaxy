@@ -1,122 +1,120 @@
 
-/* .product_list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-} */
-
-/* 
-.card {
-    width: 250px;
-    height: 350px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 20px;
-    margin-left: 10px;  
-    margin-top: 20px;
-    margin-bottom: 50px;
-    float: left;
-    border-radius: 10px; 
-}
-
-.card.clicked {
-    transform: translateY(-20px);  
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.card_content h2 {
-    font-size: 24px;
-    margin: 10px 0;
-}
-
-.card_content p.price {
-    font-size: 20px;
-    color: #007bff;
-    margin: 10px 0;
-} */
-/* ProductItem.module.css */
-
 .product_list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-  }
-  
-  .card {
+}
+
+.card {
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 300px;
-    height: 400px;
+    height: 450px;
     padding: 10px;
     margin-left: 30px;
     margin-top: 20px;
     text-align: center;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card img {
-    width: auto;
-    height: auto;
-  }
-  
-  .card_content {
+}
+
+.card img {
+    width: 250px;
+    height: 220px;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card_content {
     padding: 10px;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 1.5rem;
     margin: 0;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1rem;
     color: #666;
-  }
-  
-  .price_container {
+}
+
+.price_container {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-bottom:  0px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0px;
     padding-bottom: 0px;
-  }
-  
-  .price {
+}
+
+.price {
     font-size: 1.25rem;
+    font-weight: bold;
     color: #333;
-  }
-  
-  .quantity_controls {
+}
+
+.quantity_controls {
     display: flex;
     align-items: center;
-  }
-  
-  button {
+}
+
+
+
+button {
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
-  
-  .quantity {
-    font-size: 1rem;
+}
+
+.quantity {
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0 5px;
-  }
-  
+}
+
+.add_button {
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #de8650;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    margin-top: 15px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.add_button:hover,
+.add_button:active {
+    background: #741188;
+    border-color: #741188;
+    transform: scale(1.02);
+}
+
+.add_button:focus {
+    outline: none;
+}
+
+add_button:disabled,
+add_button:focus:disabled,
+add_button:hover:disabled,
+add_button:active:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    color: #666666;
+    cursor: not-allowed;
+}

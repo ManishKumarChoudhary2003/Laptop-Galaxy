@@ -8,7 +8,9 @@
     padding-bottom: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+body{
+    background-color: aliceblue;
+}
 .content {
     margin: 0px;
     display: flex;
@@ -19,4 +21,12 @@
 
 .content h1 {
     font-size: 40px;
+}
+
+.content input{
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
 }

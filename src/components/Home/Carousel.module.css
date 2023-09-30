@@ -1,110 +1,183 @@
-.home {
-    background-color: rgb(216, 232, 233);
-    height: 600px;
-    width: auto;
-    margin-bottom: 70px;
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* border: 1px solid black; */
-    /* background: #ffffff url(https://edgecreative.uk.com/wp-content/uploads/2022/05/Ecommerce-website-stevenage-2.jpg) center top/cover no-repeat content-box fixed; */
-    /* backdrop-filter: blur(100px);  */
-    background: #ffffff url("../../assets/pic2.jpg") center top/cover no-repeat content-box fixed;
+/* .home { */
+  /* background-color: rgb(216, 232, 233);
+  height: 600px;
+  width: auto;
+  margin-bottom: 70px;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; */
+  /* border: 1px solid black; */
+  /* background: #ffffff url(https://edgecreative.uk.com/wp-content/uploads/2022/05/Ecommerce-website-stevenage-2.jpg) center top/cover no-repeat content-box fixed; */
+  /* backdrop-filter: blur(100px);  */
+  /* background: #ffffff url("../../assets/pic2.jpg") center top/cover no-repeat content-box fixed; */
+/* } */
+
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    grid-template-columns: 1fr;
+    background-size: cover;
   }
-  
-  @media (max-width: 768px) {
-      .home {
-        height: auto;  
-        grid-template-columns: 1fr;  
-        background-size: cover;  
-      }
-    
-      .home .content_right {
-        grid-template-columns: 1fr;  
-      }
-    
-      .home .content_right .items .new .new_item {
-        font-size: 18px;  
-      }
-    }
-  
+
   .home .content_right {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: 1fr;
   }
-  
-  .home .content_right .items {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .home .content_right .items .limited {
-    color: red;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: auto;
-  }
-  
-  .home .content_right .items .new {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-rows: repeat(2, 1fr);
-  }
-  
+
   .home .content_right .items .new .new_item {
-    color: rgb(164, 23, 122);
-    font-size: 25px;
+    font-size: 18px;
   }
-  
-  .home .content_right .items .new .shop {
-    color: red;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 0px;
-  }
-  
-  .shop button {
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-  }
-  
-  .shop button:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-  }
-  
-  .home .pic_right {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .home .pic_right img {
-  
-    width: fit-content;
-    height: 500px;
-  }
+}
+
+.home .content_right {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.home .content_right .items {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .content_right .items .limited {
+  color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.home .content_right .items .new {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.home .content_right .items .new .new_item {
+  color: rgb(164, 23, 122);
+  font-size: 25px;
+}
+
+.home .content_right .items .new .shop {
+  color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+
+.shop button {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.shop button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.home .pic_right {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .pic_right img {
+
+  width: fit-content;
+  height: 500px;
+}
+
+
+
+
+/* 
+.main-container {
+  display: flex;
+  background-color: yellowgreen;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.horizontal-div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.left-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.vertical-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+
+.vertical-part {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+} */
+
+
+.home {
+  background-color: rgb(216, 232, 233);
+  height: 600px;
+  width: auto;
+  margin-bottom: 70px;
+  margin-top: 80px;
+  display: flex; 
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+  /* background: #ffffff url(https://edgecreative.uk.com/wp-content/uploads/2022/05/Ecommerce-website-stevenage-2.jpg) center top/cover no-repeat content-box fixed; */
+  /* backdrop-filter: blur(100px);  */
+  background: #ffffff url("../../assets/pic2.jpg") center top/cover no-repeat content-box fixed;
+}
+
+.head{
+  color: #e44343;
+  font-size: 40px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.para{
+  display: flex;
+  justify-content: center;
+  color: rgb(250, 15, 184);
+}
+
+.shop{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}

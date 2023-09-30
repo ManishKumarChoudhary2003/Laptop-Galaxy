@@ -1,5 +1,5 @@
-import React, { useEffect, useReducer, useRef, useState } from "react";
-
+import React, { Fragment, useEffect, useReducer, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LoginCard from "../UI/LoginCard";
 import classes from "./Login.module.css";
 import Button from "../UI/Button";
@@ -28,10 +28,6 @@ const passwordReducer = (state, action) => {
 };
 
 const Login = (props) => {
-  // const [enteredEmail, setEnteredEmail] = useState("");
-  // const [emailIsValid, setEmailIsValid] = useState();
-  // const [enteredPassword, setEnteredPassword] = useState("");
-  // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
@@ -45,18 +41,9 @@ const Login = (props) => {
   });
 
   const dispatch = useDispatch();
-
-  // const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
-
-  // useEffect(() =>{
-  //   console.log("Effect Running");
-
-  //   return () =>{
-  //   console.log("Effect CleanUp");
-  //   }
-  // },[]);
 
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
@@ -66,8 +53,19 @@ const Login = (props) => {
       Email: emailState.value,
       Password: passwordState.value,
     };
+    
+    const savedLoginData = await fetch(
+        "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_saved_login.json",
+        {
+          method: "POST",
+          body: JSON.stringify(detailsLogin),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     const response = await fetch(
-      "https://react-cea7f-default-rtdb.firebaseio.com/laptop_galaxy_login.json",
+      "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_login.json",
       {
         method: "POST",
         body: JSON.stringify(detailsLogin),
@@ -77,7 +75,10 @@ const Login = (props) => {
       }
     );
     const data = await response.json();
-    console.log(data);
+    dispatch(uiActions.loginHandler());
+    navigate("/");
+
+    
   }
 
   useEffect(() => {
@@ -93,31 +94,24 @@ const Login = (props) => {
   }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
-    // setEnteredEmail(event.target.value);
     dispatchEmail({ type: "USER_INPUT", val: event.target.value });
-    // setFormIsValid(event.target.value.includes("@") && passwordState.isValid);
   };
 
   const passwordChangeHandler = (event) => {
-    // setEnteredPassword(event.target.value);
     dispatchPassword({ type: "USER_INPUT", val: event.target.value });
-    // setFormIsValid(emailState.isValid && event.target.value.trim().length > 6);
   };
 
   const validateEmailHandler = () => {
-    // setEmailIsValid(emailState.isValid);
     dispatchEmail({ type: "INPUT_BLUR" });
   };
 
   const validatePasswordHandler = () => {
-    // setPasswordIsValid(enteredPassword.trim().length > 6);
     dispatchPassword({ type: "INPUT_BLUR" });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
     if (formIsValid) {
-      // authCtx.onLogin(emailState.value, passwordState.value);
       dispatch(uiActions.loginHandler());
       dispatch(uiActions.logout());
     } else if (!emailIsValid) {
@@ -128,6 +122,11 @@ const Login = (props) => {
   };
 
   return (
+    <Fragment>
+    <div className={classes.register}>
+        <p>You Can Register Now</p>
+        <hr />
+    </div>
     <LoginCard className={classes.login}>
       <form onSubmit={submitHandler}>
         <Input
@@ -157,11 +156,11 @@ const Login = (props) => {
             onClick={onAddLoginHandler}
             className={classes.btn}
           >
-            Login
+            REGISTER
           </Button>
         </div>
       </form>
-    </LoginCard>
+    </LoginCard></Fragment>
   );
 };
 

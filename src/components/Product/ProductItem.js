@@ -50,6 +50,7 @@ const ProductItem = (props) => {
               <button onClick={handleIncrement}>+</button>
             </div>
           </div>
+          <div><button className={classes.add_button}>Add to Cart</button></div>
         </div>
       </div>
     </div>

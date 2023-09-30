@@ -3,16 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isLogin: false,
   isLogout: true,
-  showFooter: true,
   isLoggedIn: localStorage.getItem("isLoggedIn") === "1",
 };
 const uiSlice = createSlice({
   name: "ui",
   initialState: initialState,
   reducers: {
-    showFooterHandler(state) {
-      state.showFooter = !state.showFooter;
-    },
     login(state) {
       state.isLogin = !state.isLogin;
     },

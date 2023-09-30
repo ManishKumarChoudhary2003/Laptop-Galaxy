@@ -2,6 +2,8 @@
     width: 90%;
     max-width: 40rem;
     margin: 2rem auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
     padding: 2rem;
   }
   
@@ -9,3 +11,11 @@
     text-align: center;
   }
   
+
+  .register p{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
