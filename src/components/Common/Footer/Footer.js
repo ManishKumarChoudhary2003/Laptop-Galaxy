@@ -30,7 +30,9 @@ const Footer = () => {
             <div className={classes.company_legal_social_itmes}>
             <Link to="privacy">PRIVACY</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>DISCLAIMER</div>
+            <div className={classes.company_legal_social_itmes}>
+              <Link to="disclaimer">DISCLAIMER</Link>
+            </div>
           </div>
         </div>
 

@@ -1,5 +1,4 @@
-.card_content{
-    /* height: 1000px; */
+.card_content { 
     margin-bottom: 50px;
     margin-top: 50px;
     width: 100%;
@@ -8,4 +7,16 @@
     justify-content: flex-start;
     padding-bottom: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    margin: 0px;
+    display: flex;
+    padding: 0px;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+.content h1 {
+    font-size: 40px;
 }
