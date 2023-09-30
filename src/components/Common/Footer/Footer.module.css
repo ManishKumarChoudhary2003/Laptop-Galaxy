@@ -1,8 +1,7 @@
 .main_container {
-    /* background-color: wheat; */
+    background-color: rgb(252, 249, 246);
      /* border: 2px solid red;   */
-     position: relative;    
-    margin-top: 50px;
+     position: relative;  
     height: 250px;
     display: grid;
     grid-gap: 50px;

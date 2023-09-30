@@ -11,8 +11,8 @@ const LayoutPage = () => {
         <MainHeader />
         <PageContent>
           <Outlet />
-          <Footer />
         </PageContent>
+      <Footer />
       </main>
     </Fragment>
   );

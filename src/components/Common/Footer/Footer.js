@@ -12,8 +12,12 @@ const Footer = () => {
             <div className={classes.company_legal_social_itmes}>
               <Link to="aboutus">ABOUT US</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>FAQ</div>
-            <div className={classes.company_legal_social_itmes}>CONTACT US</div>
+            <div className={classes.company_legal_social_itmes}>
+              <Link to="faq">FAQ</Link>
+            </div>
+            <div className={classes.company_legal_social_itmes}>
+              <Link to="contact">CONTACT US</Link>
+            </div>
           </div>
         </div>
 
@@ -21,10 +25,10 @@ const Footer = () => {
           <div>
             <div className={classes.company_legal_social}>LEGAL</div>
             <div className={classes.company_legal_social_itmes}>
-              TERMS & CONDITIONS
+              <Link to="conditions">TERMS & CONDITIONS</Link>
             </div>
             <div className={classes.company_legal_social_itmes}>
-              PRIVACY POLICY
+            <Link to="privacy">PRIVACY</Link>
             </div>
             <div className={classes.company_legal_social_itmes}>DISCLAIMER</div>
           </div>

@@ -1,12 +1,12 @@
-import React from "react";
-import Navigation from "./Navigation";
+import React from "react"; 
 import classes from "./MainHeader.module.css";
+import MainNavigation from "./MainNavigation";
 
 const MainHeader = () => {
   return (
     <header className={classes["main-header"]}>
       <h1>Laptop Galaxy</h1>
-      <Navigation />
+      <MainNavigation />
     </header>
   );
 };
