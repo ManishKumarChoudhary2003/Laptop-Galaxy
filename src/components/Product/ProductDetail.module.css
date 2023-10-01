@@ -1,0 +1,152 @@
+.card {
+    /* background: rgb(241, 239, 239); */
+    box-shadow: 0 5px 10px rgba(11, 9, 9, 0.26);
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image_button {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 400px 100px;
+
+}
+
+.image_button .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_button .image img {
+    height: 300px;
+    width: 350px;
+}
+
+.image_button .btn {
+    /* background-color: #363131; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* .btn button{
+    font: inherit;
+    border: 1px solid #4f005f;
+    background: #4f005f;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 30px;
+} */
+.btn .btn1{ 
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+}
+.btn .btn2{ 
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button {
+    font: inherit;
+    border: 1px solid #b138c6;
+    background: #4f005f;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 30px;
+}
+
+.btn button:hover,
+.btn button:active {
+    background: #741188;
+    border-color: #741188;
+}
+
+.btn button:focus {
+    outline: none;
+}
+
+.btn button:disabled,
+.btn button:focus:disabled,
+.btn button:hover:disabled,
+.btn button:active:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    color: #666666;
+    cursor: not-allowed;
+} 
+
+
+.details {
+    background-color: rgb(241, 239, 239);
+    display: grid;
+    grid-gap: 0px;
+    grid-template-rows: 70px 50px 180px 250px;
+}
+
+.name {
+    /* background-color: rgb(46, 177, 203); */
+    margin: 0px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: rgb(206, 5, 5); */
+    padding-left: 20px;
+}
+
+.ratings .p_just {
+    color: #4e4747;
+    font-weight: bold;
+}
+
+.ratings .rat {
+    padding: 5px;
+    background-color: rgb(156, 236, 156);
+    height: fit-content;
+    width: fit-content;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.price {
+    /* background-color: rgb(100, 189, 109); */
+    padding-left: 20px;
+    padding-top: 0px;
+}
+
+.price h2 {
+    color: #363131;
+    font-size: 30px;
+}
+
+.price p {
+    color: #4b4747;
+    font-size: 15px;
+}
+
+.offers {
+    /* background-color: rgb(165, 114, 213); */
+    padding: 10px;
+}
+
+.offers p {
+    font-size: 13px;
+}

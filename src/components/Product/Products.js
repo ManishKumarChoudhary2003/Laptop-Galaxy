@@ -1,8 +1,4 @@
-import ProductList from "./ProductList";
-import classes from "./ProductCard.module.css";
-import { useState } from "react";
-
-const Dummy_Laptops = [
+const laptops = [
   {
     id: "laptop1",
     name: "Lenovo IdeaPad 3 Core i3 11th Gen - (8 GB/256 GB SSD/Windows 11 Home) 14ITL05 Thin and Light Laptop",
@@ -16,18 +12,17 @@ const Dummy_Laptops = [
   },
   {
     id: "laptop2",
-    name: "Lenovo IdeaPad 3 Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 82H801L7IN | 82H802FJIN | 82H802...",
+    name: "Lenovo IdeaPad 3 Core i3 11th Gen - (8 GB/512 GB SSD/Windows 11 Home) 82H801L7IN | 82H802FJIN | 82H802",
     brand: "Lenovo",
     price: 37990.0,
     ratings: 4.2,
     details:
       "['Intel Core i3 Processor (11th Gen)' '8 GB DDR4 RAM' '64 bit Windows 11 Operating System' '512 GB SSD' '39.62 cm (15.6 inch) Display' 'Office Home and Student 2021' '2 Year Onsite Warranty']",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUukDFoMgb2ZbfwhRRPvY3MOYXnRDbkiMCTshfv_NnA36JjbYBlp7iczoayhjmesJ-QMw&usqp=CAU",
+    image: "https://example.com/lenovo-image2.jpg",
   },
   {
     id: "laptop3",
-    name: "ASUS VivoBook 15 (2022) Core i3 10th Gen - (8 GB/512 GB SSD/Windows 11 Home) X515JA-EJ362WS | X515JA-E...",
+    name: "ASUS VivoBook 15 (2022) Core i3 10th Gen - (8 GB/512 GB SSD/Windows 11 Home) X515JA-EJ362WS | X515JA-E",
     brand: "ASUS",
     price: 32990.0,
     ratings: 4.3,
@@ -1664,41 +1659,3 @@ const Dummy_Laptops = [
     image: "https://example.com/image34.jpg",
   },
 ];
-
-const ProductCard = () => {
-  const [sortedLaptops, setSortedLaptops] = useState(Dummy_Laptops);
-  const [searchTerm, setSearchTerm] = useState(" ");
-
-
-
-  const handleSearchChange = (event) => {
-    const searchValue = event.target.value.toLowerCase();
-    setSearchTerm(searchValue);
-
-    const filteredLaptops = Dummy_Laptops.filter((laptop) =>
-      laptop.brand.toLowerCase().includes(searchValue)
-    );
-
-    setSortedLaptops(filteredLaptops);
-  };
-  return (
-    <div>
-      <div className={classes.content}>
-        <h1>Products</h1>
-        <h2>You Searched : {searchTerm }</h2>
-        <h3>{sortedLaptops.length === 0 && "Laptop Not Found"}</h3>
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Enter Your Laptop"
-        />
-      </div>
-      <hr />
-      <div className={classes.card_content}>
-        <ProductList laptops={sortedLaptops} />
-      </div>
-    </div>
-  );
-};
-export default ProductCard;

@@ -6,54 +6,98 @@
     margin: 10px;
 }
 
-.card {
+.card { 
     border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px;
-    height: 450px;
+    border-radius: 10px;
+    width: 300px; 
+    height: 420px;
+    flex-wrap: wrap;
     padding: 10px;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
+    transition: transform 0.3s ease;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
-
+.card:hover {
+    transform: scale(1.03);
+}
 .card img {
     width: 250px;
-    height: 220px;
-    transition: transform 0.3s ease;
+    height: 200px;
+    /* transition: transform 0.3s ease; */
 }
 
-.card img:hover {
+/* .card img:hover {
     transform: scale(1.1);
-}
+} */
 
 .card_content {
-    padding: 10px;
+    padding: 0px;
 }
+
+.card_content_name { 
+    overflow: hidden;  
+    white-space: wrap;  
+}
+
+.card_content_name:hover { 
+    color: #0056b3;
+    white-space: normal; 
+    overflow: hidden; 
+}
+
 
 h2 {
     font-size: 1.5rem;
     margin: 0;
 }
 
-p {
-    font-size: 1rem;
-    color: #666;
+.card_content p {
+    font-size: 1.01rem;
+    color: #353131;
 }
 
 .price_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
     padding-bottom: 0px;
 }
 
+.price_container p{ 
+    color: rgb(45, 9, 138);
+}
 .price {
     font-size: 1.25rem;
     font-weight: bold;
     color: #333;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.10rem;
+    margin-top: 10px;
+    font-weight: bold;  
+    color: #333;
+}
+.ratings p{
+    background-color: green;
+    border-radius: 30px;
+    border: 2px solid green;
+    width: 50px;  
+    color: #ccc;
+    padding: 5px;
+}
+.ratings p:hover{
+    background-color: #529e52;
+    border-radius: 30px;
+    width: 50px; 
+    color: #ccc;
+    padding: 5px; 
+    cursor: pointer;
 }
 
 .quantity_controls {
@@ -93,15 +137,15 @@ button:hover {
     padding: 0.75rem 3.5rem;
     cursor: pointer;
     font-size: 1.05rem;
-    margin-top: 15px;
+    margin-top: 5px;
     border-radius: 30px;
     transition: transform 0.3s ease;
 }
 
 .add_button:hover,
 .add_button:active {
-    background: #741188;
-    border-color: #741188;
+    background: #a96db5;
+    border-color: #af13ce;
     transform: scale(1.02);
 }
 
@@ -115,6 +159,119 @@ add_button:hover:disabled,
 add_button:active:disabled {
     background: #ccc;
     border-color: #ccc;
-    color: #666666;
+    color: #ac9b9b;
     cursor: not-allowed;
 }
+
+
+/* 
+.product_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    height: 420px;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+    transform: scale(1.1);
+}
+
+.cardContent {
+    padding: 0;
+}
+
+.cardContentName {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #333;
+}
+
+.cardContentName:hover {
+    color: #0056b3;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.ratings p {
+    background-color: green;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.ratings p:hover {
+    background-color: #529e52;
+}
+
+.addButton {
+    font: inherit;
+    border: none;
+    background: #de8650;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    margin-top: 10px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    outline: none;
+}
+
+.addButton:hover {
+    background: #a96db5;
+    transform: scale(1.02);
+} */

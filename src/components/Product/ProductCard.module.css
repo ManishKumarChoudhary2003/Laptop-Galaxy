@@ -1,4 +1,4 @@
-.card_content { 
+.card_content {
     margin-bottom: 50px;
     margin-top: 50px;
     width: 100%;
@@ -8,9 +8,70 @@
     padding-bottom: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-body{
+
+body {
     background-color: aliceblue;
 }
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 80px;
+    background-color: white; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 50px;
+    z-index: 1000; 
+    border-bottom: 1px solid #ccc; 
+}
+
+.content h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.content input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.content input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.content input:hover {
+    border-color: #666;
+}
+
+.content input::placeholder {
+    color: #999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.content input:hover::placeholder {
+    opacity: 1;
+}
+
+.content input[value]:not([value=''])::placeholder {
+    transform: translate(0, -20px);
+    font-size: 16px;
+    opacity: 1;
+    background-color: white;
+    padding: 5px;
+}
+
+/* 
 .content {
     margin: 0px;
     display: flex;
@@ -23,10 +84,42 @@ body{
     font-size: 40px;
 }
 
-.content input{
-    margin-top: 50px;
+.content input {
+    margin-top: 40px;
     margin-right: 50px;
     width: 300px;
     height: 30px;
     font-size: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
 }
+
+.content input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.content input:hover {
+    border-color: #666;
+}
+
+.content input::placeholder {
+    color: #999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.content input:hover::placeholder {
+    opacity: 1;
+}
+
+.content input[value]:not([value=''])::placeholder {
+    transform: translate(0, -20px);
+    font-size: 16px;
+    opacity: 1;
+    background-color: white;
+    padding: 5px;
+} */

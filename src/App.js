@@ -8,16 +8,17 @@ import FAQ from "./components/Common/Footer/FooterContent/FAQ";
 import Contact from "./components/Common/Footer/FooterContent/Contact";
 import Conditions from "./components/Common/Footer/FooterContent/Conditions";
 import Privacy from "./components/Common/Footer/FooterContent/Privacy";
-import Disclaimer from "./components/Common/Footer/FooterContent/Disclaimer"; 
+import Disclaimer from "./components/Common/Footer/FooterContent/Disclaimer";
 import AuthenticationPage from "./pages/Authentication";
 import ErrorPage from "./pages/Error";
+import ProductDetail from "./components/Product/ProductDetail";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <LayoutPage />,
-      errorElement : <ErrorPage />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
@@ -27,6 +28,24 @@ function App() {
           path: "product",
           element: <ProductCard />,
         },
+        {
+          path: "product/:productId",
+          element: <ProductDetail />,
+        },
+        // {
+        //   path: "product",
+        //   element: <ProductCard />,
+        //   children : [
+        //     {
+        //       index : true,
+        //       element : <ProductCard />,
+        //     },
+        //     {
+        //       path:":productId",
+        //       element: <ProductDetail />,
+        //     }
+        //   ]
+        // },
         {
           path: "auth",
           element: <AuthenticationPage />,
@@ -55,7 +74,6 @@ function App() {
           path: "disclaimer",
           element: <Disclaimer />,
         },
-
       ],
     },
   ]);

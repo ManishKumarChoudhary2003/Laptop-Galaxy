@@ -1,6 +1,6 @@
 import classes from './PageContent.module.css';
 
-function PageContent({ title, children }) {
+function PageContent({ children }) {
   return (
     <div className={classes.content}>
       {children}

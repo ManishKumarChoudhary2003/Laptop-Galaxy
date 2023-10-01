@@ -1,0 +1,11 @@
+/* ShowError.module.css */
+.centeredContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set a minimum height to center vertically */
+    background-color: yellowgreen;
+    text-align: center;
+  }
+  
