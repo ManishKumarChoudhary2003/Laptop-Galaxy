@@ -11,7 +11,10 @@ import Privacy from "./components/Common/Footer/FooterContent/Privacy";
 import Disclaimer from "./components/Common/Footer/FooterContent/Disclaimer";
 import AuthenticationPage from "./pages/Authentication";
 import ErrorPage from "./pages/Error";
-import ProductDetail from "./components/Product/ProductDetail";
+import ProductDetail from "./components/Product/ProductDetail"; 
+import CartPage from "./pages/Cart";
+import Order from "./components/Order/Order";
+import Checkout from "./components/Order/Checkout";
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +34,14 @@ function App() {
         {
           path: "product/:productId",
           element: <ProductDetail />,
+        },
+        {
+          path : "cartdata",
+          element : <CartPage/>
+        },
+        {
+          path : "orders",
+          element : <Order/>
         },
         // {
         //   path: "product",

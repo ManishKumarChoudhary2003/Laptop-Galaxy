@@ -3,7 +3,7 @@
     box-shadow: 0 5px 10px rgba(11, 9, 9, 0.26);
     border-radius: 10px;
     margin-left: 250px;
-    margin-top: 150px;
+    margin-top: 120px;
     margin-bottom: 150px;
     width: 1000px;
     height: 500px;
@@ -32,7 +32,13 @@
 .image_button .btn {
     /* background-color: #363131; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.quantity {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 5px;
 }
 
 /* .btn button{
@@ -45,13 +51,14 @@
     font-size: 1.25rem;
     border-radius: 30px;
 } */
-.btn .btn1{ 
+.btn .btn1 {
     display: flex;
     justify-content: center;
     font-weight: bold;
     align-items: center;
 }
-.btn .btn2{ 
+
+.btn .btn2 {
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -87,7 +94,7 @@
     border-color: #ccc;
     color: #666666;
     cursor: not-allowed;
-} 
+}
 
 
 .details {

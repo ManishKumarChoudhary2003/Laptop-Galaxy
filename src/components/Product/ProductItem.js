@@ -1,11 +1,12 @@
- 
 import classes from "./ProductItem.module.css";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
 
 const ProductItem = (props) => {
   // const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.ui.isLoggedIn);
 
   // const handleIncrement = () => {
@@ -17,6 +18,24 @@ const ProductItem = (props) => {
   //     setQuantity(quantity - 1);
   //   }
   // };
+
+  // const addToCartHandler = () =>{
+  //   dispatch(cartActions.addItemToCart(props.id))
+  // }
+  const { name, price, id } = props;
+
+  const addToCartHandler = () => {
+    // and then send Http request
+    // fetch('firebase-url', { method: 'POST', body: JSON.stringify(newCart) })
+
+    dispatch(
+      cartActions.addItemToCart({
+        id,
+        name,
+        price,
+      })
+    );
+  };
 
   const detailsHandler = () => {
     const data = {
@@ -37,10 +56,15 @@ const ProductItem = (props) => {
       <div className={classes.card}>
         <img src={props.image} alt="Loading..." />
         <div className={classes.card_content}>
-          <p className={classes.card_content_name}>{props.name}</p> 
+          <p className={classes.card_content_name} onClick={detailsHandler}>
+            {props.name}
+          </p>
           <div className={classes.price_container}>
             <p className={classes.price}>Selling price-</p>
             <p className={classes.price}>₹{props.price}.0</p>
+            <div className={classes.ratings}>
+              <p>★{props.ratings}</p>
+            </div>
 
             {/* <div className={classes.quantity_controls}>
               <button onClick={handleDecrement}>-</button>
@@ -49,14 +73,17 @@ const ProductItem = (props) => {
             </div> */}
           </div>
           <div className={classes.ratings}>
-          <p>★{props.ratings}</p>
-          <div>
-            <button disabled={!isLoggedIn} className={classes.add_button} onClick={detailsHandler}>
+            <button className={classes.add_button} onClick={addToCartHandler}>
+              Add to Cart
+            </button>
+            <button
+              disabled={!isLoggedIn}
+              className={classes.add_button}
+              onClick={detailsHandler}
+            >
               Buy Now
             </button>
           </div>
-          </div>
-            
         </div>
       </div>
     </div>

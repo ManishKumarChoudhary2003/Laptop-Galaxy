@@ -9,10 +9,10 @@ import { uiActions } from "../../store/ui-slice";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: action.val.includes("@") };
+    return { value: action.val, isValid: action.val.includes("@gmail.com") };
   }
   if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.includes("@") };
+    return { value: state.value, isValid: state.value.includes("@gmail.com") };
   }
   return { value: "", isValid: false };
 };

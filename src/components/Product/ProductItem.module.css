@@ -44,6 +44,7 @@
 .card_content_name:hover { 
     color: #0056b3;
     white-space: normal; 
+    cursor: pointer;
     overflow: hidden; 
 }
 
@@ -77,9 +78,9 @@ h2 {
 
 .ratings {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 1.10rem;
-    margin-top: 10px;
+    margin-top: 2px;
     font-weight: bold;  
     color: #333;
 }
@@ -113,7 +114,7 @@ button {
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
-    font-size: 1.5rem;
+    font-size: 1.05rem;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -134,7 +135,7 @@ button:hover {
     border: 1px solid #4f005f;
     background: #de8650;
     color: white;
-    padding: 0.75rem 3.5rem;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
     font-size: 1.05rem;
     margin-top: 5px;

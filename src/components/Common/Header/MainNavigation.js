@@ -9,6 +9,8 @@ const MainNavigation = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.ui.isLoggedIn);
 
+
+
   const handleLogout = () => {
     const deleteUserData = async () => {
       try {
@@ -74,6 +76,19 @@ const MainNavigation = () => {
             </NavLink>
           </li>
         )}
+        {isLoggedIn && (
+          <li>
+            <NavLink
+              to="/orders"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+              end
+            >
+              Orders
+            </NavLink>
+          </li>
+        )}
        
         {isLoggedIn && (
           <li>
@@ -90,7 +105,7 @@ const MainNavigation = () => {
         )}
         <li>
           <NavLink
-            to="/"
+            to="/cartdata"
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }

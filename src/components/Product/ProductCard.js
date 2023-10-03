@@ -1667,16 +1667,15 @@ const Dummy_Laptops = [
 
 const ProductCard = () => {
   const [sortedLaptops, setSortedLaptops] = useState(Dummy_Laptops);
-  const [searchTerm, setSearchTerm] = useState(" ");
-
-
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event) => {
     const searchValue = event.target.value.toLowerCase();
     setSearchTerm(searchValue);
 
-    const filteredLaptops = Dummy_Laptops.filter((laptop) =>
-      laptop.brand.toLowerCase().includes(searchValue)
+    const filteredLaptops = Dummy_Laptops.filter(
+      (laptop) =>
+        laptop.brand.toLowerCase().includes(searchValue) 
     );
 
     setSortedLaptops(filteredLaptops);
@@ -1685,7 +1684,7 @@ const ProductCard = () => {
     <div>
       <div className={classes.content}>
         <h1>Products</h1>
-        <h2>You Searched : {searchTerm }</h2>
+        {/* <h2>You Searched : {searchTerm }</h2> */}
         <h3>{sortedLaptops.length === 0 && "Laptop Not Found"}</h3>
         <input
           type="text"
