@@ -3,10 +3,10 @@
     border-radius: 6px;
     background-color: aliceblue;
     padding: 1rem;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 150px;
-    width: 90%;
-    max-width: 40rem;
+    width: 100%;
+    max-width: 60rem;
     /* max-height: 500px; */
     /* overflow: auto; */
   }

@@ -22,7 +22,7 @@ const ProductItem = (props) => {
   // const addToCartHandler = () =>{
   //   dispatch(cartActions.addItemToCart(props.id))
   // }
-  const { name, price, id } = props;
+  const { name, price, id, image, ratings, details, brand, currentDate } = props;
 
   const addToCartHandler = () => {
     // and then send Http request
@@ -33,8 +33,15 @@ const ProductItem = (props) => {
         id,
         name,
         price,
+        image,
+        ratings,
+        brand,
+        details,
+        currentDate,
       })
     );
+
+    // dispatch(cartActions.cartItemAddingHandler());
   };
 
   const detailsHandler = () => {
@@ -46,6 +53,7 @@ const ProductItem = (props) => {
       ratings: props.ratings,
       details: props.details,
       name: props.name,
+      currentDate:props.currentDate,
     };
 
     navigate(`/product/${props.id}`, { state: { laptopData: data } });
@@ -77,7 +85,6 @@ const ProductItem = (props) => {
               Add to Cart
             </button>
             <button
-              disabled={!isLoggedIn}
               className={classes.add_button}
               onClick={detailsHandler}
             >

@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
-import { uiActions } from '../../store/ui-slice';
-import classes from './CartButton.module.css';
+import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { uiActions } from "../../store/ui-slice";
+import classes from "./CartButton.module.css";
 
 const CartButton = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const CartButton = () => {
   // };
   return (
     <button className={classes["cart-button"]}>
-      <span className={classes["cart-icon"]}>🛒</span>  
+      <span className={classes["cart-icon"]}>🛒</span>
       <span className={classes.badge}>{cartQuantity}</span>
     </button>
   );

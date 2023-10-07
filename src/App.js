@@ -43,6 +43,10 @@ function App() {
           path : "orders",
           element : <Order/>
         },
+        {
+          path : "checkout",
+          element : <Checkout />
+        },
         // {
         //   path: "product",
         //   element: <ProductCard />,

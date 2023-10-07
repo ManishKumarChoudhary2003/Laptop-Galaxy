@@ -2,6 +2,7 @@ import ProductItem from "./ProductItem";
 import classes from "./ProductList.module.css";
 
 const ProductList = (props) => {
+  
   return (
     <>
       {props.laptops.length > 0 &&
@@ -14,6 +15,8 @@ const ProductList = (props) => {
             brand={laptop.brand}
             image={laptop.image}
             details={laptop.details}
+            currentDate={props.currentDate}
+
           />
         ))}
     </>

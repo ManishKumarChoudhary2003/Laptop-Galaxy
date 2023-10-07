@@ -1668,14 +1668,14 @@ const Dummy_Laptops = [
 const ProductCard = () => {
   const [sortedLaptops, setSortedLaptops] = useState(Dummy_Laptops);
   const [searchTerm, setSearchTerm] = useState("");
+  const currentDate = new Date().toLocaleDateString();
 
   const handleSearchChange = (event) => {
     const searchValue = event.target.value.toLowerCase();
     setSearchTerm(searchValue);
 
-    const filteredLaptops = Dummy_Laptops.filter(
-      (laptop) =>
-        laptop.brand.toLowerCase().includes(searchValue) 
+    const filteredLaptops = Dummy_Laptops.filter((laptop) =>
+      laptop.brand.toLowerCase().includes(searchValue)
     );
 
     setSortedLaptops(filteredLaptops);
@@ -1695,7 +1695,7 @@ const ProductCard = () => {
       </div>
       <hr />
       <div className={classes.card_content}>
-        <ProductList laptops={sortedLaptops} />
+        <ProductList laptops={sortedLaptops} currentDate={currentDate} />
       </div>
     </div>
   );

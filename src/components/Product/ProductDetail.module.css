@@ -32,7 +32,7 @@
 .image_button .btn {
     /* background-color: #363131; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .quantity {
@@ -59,24 +59,37 @@
 }
 
 .btn .btn2 {
-    font-weight: bold;
     display: flex;
     justify-content: center;
+    font-weight: bold;
     align-items: center;
 }
 
-.btn button {
-    font: inherit;
-    border: 1px solid #b138c6;
-    background: #4f005f;
-    color: white;
-    padding: 0.75rem 3.5rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-    border-radius: 30px;
+.btn button{
+  font-size:20px;
+  font-family:Arial;
+  width:134px;
+  height:48px;
+  border-width:3px;
+  color:#fff;
+  border-color:#eeb44f;
+  font-weight:bold;
+  border-top-left-radius:13px;
+  border-top-right-radius:13px;
+  border-bottom-left-radius:13px;
+  border-bottom-right-radius:13px;
+  box-shadow:inset 0px 0px 11px -7px #fce2c1;
+  text-shadow:inset 3px 1px 25px #cc9f52;
+  background:linear-gradient(#ffc477, #fb9e25);
 }
 
-.btn button:hover,
+button:hover {
+  background: linear-gradient(#96938f, #9c9791);
+}
+              
+
+
+/* .btn button:hover,
 .btn button:active {
     background: #741188;
     border-color: #741188;
@@ -94,7 +107,7 @@
     border-color: #ccc;
     color: #666666;
     cursor: not-allowed;
-}
+} */
 
 
 .details {

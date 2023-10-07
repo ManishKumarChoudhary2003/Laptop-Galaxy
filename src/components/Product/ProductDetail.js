@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import classes from "./ProductDetail.module.css";
 import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(0);
@@ -14,14 +16,29 @@ const ProductDetail = () => {
     navigate(-1);
   };
 
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
+  // const handleIncrement = () => {
+  //   setQuantity(quantity + 1);
+  // };
 
-  const handleDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
+  // const handleDecrement = () => {
+  //   if (quantity > 0) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
+
+  const addItemHandler = () => {
+    dispatch(
+      cartActions.addItemToCart({
+        id:laptopData.id,
+        name:laptopData.name,
+        price:laptopData.price,
+        ratings:laptopData.ratings,
+        image:laptopData.image,
+        details:laptopData.details,
+        brand : laptopData.brand,
+        currentDate:laptopData.currentDate,
+      })
+    );
   };
 
   if (!laptopData) {
@@ -44,6 +61,9 @@ const ProductDetail = () => {
           </div>
 
           <div className={classes.btn2}>
+            <button onClick={addItemHandler}>Add To Cart</button>
+          </div>
+          {/* <div className={classes.btn2}>
             <button onClick={handleDecrement}>-</button>
           </div>
           <div className={classes.btn2}>
@@ -51,7 +71,7 @@ const ProductDetail = () => {
           </div>
           <div className={classes.btn2}>
             <button onClick={handleIncrement}>+</button>
-          </div>
+          </div> */}
 
 
           {/* <div className={classes.btn2}>

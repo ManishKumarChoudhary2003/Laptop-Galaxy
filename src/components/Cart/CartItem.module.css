@@ -1,7 +1,9 @@
 .item {
   margin: 1rem 0;
-  background-color: #575757;
+  background-color: rgb(217, 225, 232);
   padding: 1rem;
+  color: black;
+  animation: orders-appear 1s ease-out forwards;
 }
 
 .item p {
@@ -44,15 +46,29 @@
 }
 
 .actions button {
-  background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid black;
+  background-color: transparent; 
   margin-left: 0.5rem;
+  font-weight: bold;
   padding: 0.15rem 1rem;
-  color: white;
+  color: black;
 }
 
 .actions button:hover,
 .actions button:active {
   background-color: #4b4b4b;
   color: white;
+}
+
+  
+@keyframes orders-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
