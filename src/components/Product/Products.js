@@ -1658,4 +1658,4 @@ const laptops = [
       "['Intel Core i3 Processor (11th Gen)' '8 GB DDR4 RAM' '64 bit Windows 11 Operating System' '256 GB SSD' '39.62 cm (15.6 Inch) Display' '2 Years Onsite�Warranty']",
     image: "https://example.com/image34.jpg",
   },
-];
+]

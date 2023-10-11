@@ -8,7 +8,7 @@ const FAQ = () => {
       <div className={classes.faq}>
         <h1>FAQ</h1>
       </div>
-      <FooterCard>
+      <FooterCard className={classes.style}>
         <div>
           <h3>1. What is Laptop Galaxy?</h3>
           <p>

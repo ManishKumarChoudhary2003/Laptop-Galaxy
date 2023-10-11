@@ -23,39 +23,45 @@
 /* CartButton.css */
 
 .cart-button {
-    display: flex;
-    /* align-items: center; */
-    background-color: #efe3e3;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    /* padding: 8px 16px; */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: flex;
+  /* align-items: center; */
+  background-color: #efe3e3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  /* padding: 8px 16px; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 
 .cart-button:hover {
-    background-color: #cbc9c9;
+  background-color: #cbc9c9;
 }
 
 .cart-icon {
-    font-size: 24px;
-    margin-right: 0px;
+  font-size: 24px;
+  margin-right: 0px;
 }
 
 .cart-label {
-    font-size: 16px;
-    margin-right: 8px;
+  font-size: 16px;
+  margin-right: 8px;
 }
 
 .badge {
-    background-color: #e5e2e2;
-    border-radius: 30px;
-    padding: 0.15rem 1.25rem;
-    color: #1d1d1d;
+  background-color: #e5e2e2;
+  border-radius: 30px;
+  padding: 0.15rem 1.25rem;
+  color: #1d1d1d;
 }
 
-.badge:hover{
+.badge:hover {
   background-color: #bdb9b9;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-button {
+    display: none;
+  }
 }

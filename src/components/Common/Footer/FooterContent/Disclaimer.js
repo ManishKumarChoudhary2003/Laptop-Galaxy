@@ -8,7 +8,7 @@ const Disclaimer = () => {
       <div className={classes.disclaimer}>
         <h1>DISCLAIMER</h1>
       </div>
-      <FooterCard>
+      <FooterCard className={classes.style}>
         <div>
           <h1>Copyrights:</h1>
           <hr />

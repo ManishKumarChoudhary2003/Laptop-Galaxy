@@ -1,6 +1,8 @@
 import ProductList from "./ProductList";
 import classes from "./ProductCard.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import LoadingIndicator from "../UI/LoadingIndicator";
+// import LoadingSpinner from "../UI/LoadingSpinner";
 
 const Dummy_Laptops = [
   {
@@ -1666,26 +1668,90 @@ const Dummy_Laptops = [
 ];
 
 const ProductCard = () => {
-  const [sortedLaptops, setSortedLaptops] = useState(Dummy_Laptops);
+  const [laptop, setLaptop] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [httpError, setHttpError] = useState();
+  const [sortedLaptops, setSortedLaptops] = useState(laptop);
   const [searchTerm, setSearchTerm] = useState("");
   const currentDate = new Date().toLocaleDateString();
+
+  useEffect(() => {
+    const fetchLaptop = async () => {
+      try {
+        const response = await fetch(
+          "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptopData.json"
+        );
+
+        if (!response.ok) {
+          throw new Error("Something went wrong");
+        }
+
+        const responseData = await response.json();
+        // const loadedLaptops = [];
+
+        // id={laptop.id}
+        // name={laptop.name}
+        // price={laptop.price}
+        // ratings={laptop.ratings}
+        // brand={laptop.brand}
+        // image={laptop.image}
+        // details={laptop.details}
+        // currentDate={props.currentDate}
+
+        // for (const key in responseData) {
+        //   loadedLaptops.push({
+        //     id: Math.random().toString(),
+        //     name: responseData[key].Name,
+        //     details: responseData[key].Details,
+        //     price: responseData[key].SellingPrice,
+        //     brand: responseData[key].Brand,
+        //     image: responseData[key].Image,
+        //     ratings: responseData[key].Ratings,
+        //   });
+        // }
+        // const responseData = await response.json();
+        const loadedLaptops = Object.entries(responseData).map(
+          ([key, value]) => ({
+            id: Math.random().toString(), // Use a more reliable ID generation method here
+            name: value.Name,
+            details: value.Details,
+            price: value["Sellig Price"],
+            brand: value.Brand,
+            image: value.Image,
+            ratings: value.Ratings,
+          })
+        );
+        setLaptop(loadedLaptops);
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
+        setHttpError(error.message);
+      }
+    };
+
+    fetchLaptop();
+  }, []);
+
+  useEffect(() => {
+    const filteredLaptops = laptop.filter((laptop) =>
+      laptop.brand.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSortedLaptops(filteredLaptops);
+  }, [searchTerm, laptop]);
 
   const handleSearchChange = (event) => {
     const searchValue = event.target.value.toLowerCase();
     setSearchTerm(searchValue);
-
-    const filteredLaptops = Dummy_Laptops.filter((laptop) =>
-      laptop.brand.toLowerCase().includes(searchValue)
-    );
-
-    setSortedLaptops(filteredLaptops);
   };
   return (
     <div>
       <div className={classes.content}>
         <h1>Products</h1>
         {/* <h2>You Searched : {searchTerm }</h2> */}
-        <h3>{sortedLaptops.length === 0 && "Laptop Not Found"}</h3>
+        <h3>
+          {sortedLaptops.length === 0 && searchTerm && "Laptop Not Found"}
+        </h3>
+        {/* {isLoading && <p className={classes.laptopsLoading}>Loading....</p>} */}
         <input
           type="text"
           value={searchTerm}
@@ -1694,10 +1760,52 @@ const ProductCard = () => {
         />
       </div>
       <hr />
+      {isLoading && <p className={classes.laptopsLoading}><LoadingIndicator /></p>}
+      {/* {isLoading && <p className={classes.laptopsLoading}>Loading....</p>} */}
+        {httpError && <p className={classes.laptopsLoading}>{httpError}</p>}
       <div className={classes.card_content}>
-        <ProductList laptops={sortedLaptops} currentDate={currentDate} />
+        {!isLoading && !httpError && (
+          <ProductList laptops={sortedLaptops} currentDate={currentDate} />
+        )}
       </div>
     </div>
   );
 };
 export default ProductCard;
+
+// const ProductCard = () => {
+//   const [sortedLaptops, setSortedLaptops] = useState(Dummy_Laptops);
+//   const [searchTerm, setSearchTerm] = useState("");
+//   const currentDate = new Date().toLocaleDateString();
+
+//   const handleSearchChange = (event) => {
+//     const searchValue = event.target.value.toLowerCase();
+//     setSearchTerm(searchValue);
+
+//     const filteredLaptops = Dummy_Laptops.filter((laptop) =>
+//       laptop.brand.toLowerCase().includes(searchValue)
+//     );
+
+//     setSortedLaptops(filteredLaptops);
+//   };
+//   return (
+//     <div>
+//       <div className={classes.content}>
+//         <h1>Products</h1>
+//         {/* <h2>You Searched : {searchTerm }</h2> */}
+//         <h3>{sortedLaptops.length === 0 && "Laptop Not Found"}</h3>
+//         <input
+//           type="text"
+//           value={searchTerm}
+//           onChange={handleSearchChange}
+//           placeholder="Enter Your Laptop"
+//         />
+//       </div>
+//       <hr />
+//       <div className={classes.card_content}>
+//         <ProductList laptops={sortedLaptops} currentDate={currentDate} />
+//       </div>
+//     </div>
+//   );
+// };
+// export default ProductCard;

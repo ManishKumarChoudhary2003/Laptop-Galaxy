@@ -7,7 +7,9 @@
     background-color: #d8d8d8;
     animation: footer-appear 1s ease-out forwards;
 }
-
+.style h3 {
+  font-style: italic;
+}
 p{
     font-size: 20px;
     animation: footer-appear 1s ease-out forwards;

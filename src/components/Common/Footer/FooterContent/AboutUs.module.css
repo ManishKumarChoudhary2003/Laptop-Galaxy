@@ -1,26 +1,30 @@
-.about{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px; 
-    background-color: #d8d8d8;
+.about {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color: #d8d8d8;
   animation: footer-appear 1s ease-out forwards;
 }
 
-p{
-    font-size: 20px;
-    animation: footer-appear 1s ease-out forwards;
+.style h1 {
+  font-style: italic;
+}
+
+p {
+  font-size: 20px;
+  animation: footer-appear 1s ease-out forwards;
 }
 
 @keyframes footer-appear {
-    from {
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

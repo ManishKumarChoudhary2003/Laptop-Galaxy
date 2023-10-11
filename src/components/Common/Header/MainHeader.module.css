@@ -20,13 +20,19 @@
     color: #706363;
   }
 
+  .main-header img{
+    margin-top: 10px;
+    height: 2rem;
+    width: 2rem;
+  }
+
   .content {
     padding-top: 5rem;
   }
 
   @media screen and (max-width: 768px) {
     .main-header {
-      height: 3rem; /* Reduce the height for mobile */
+      height: 10rem; /* Reduce the height for mobile */
     }
   
     .main-header h1 {

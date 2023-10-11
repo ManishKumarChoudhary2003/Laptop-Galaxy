@@ -49,11 +49,17 @@
   
   @media screen and (max-width: 768px) {
     .nav ul {
-      flex-direction: column; /* Stack navigation items vertically */
+      display: grid;
+      grid-gap: 0px;
+      flex-direction: column;
+      height: 10rem;
+      margin-right: 50px;
+       /* Stack navigation items vertically */
       /* align-items: flex-start; Align items to the left */
     }
   
     .nav li {
+      font-size: 1rem; 
       margin-left: 0; /* Remove margin for mobile */
       margin-bottom: 1rem; /* Add spacing between navigation items */
     }

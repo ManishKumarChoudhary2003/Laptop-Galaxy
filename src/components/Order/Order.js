@@ -194,6 +194,7 @@ import OrderItem from "./OrderItem";
 import React, { useState, useEffect, Fragment } from "react";
 import classes from "./Order.module.css";
 import OrderCard from "../UI/OrderCard";
+import LoadingIndicator from "../UI/LoadingIndicator";
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
@@ -268,8 +269,8 @@ const Order = () => {
         />
       </div>
       <section>
-        {isLoading && <p className={classes.ordersLoading}>Loading....</p>}
-        {httpError && <p>{httpError}</p>}
+        {isLoading && <p className={classes.ordersLoading}><LoadingIndicator /></p>}
+        {httpError && <p className={classes.ordersLoading}>{httpError}</p>}
         {!isLoading && !httpError && (
           <OrderCard  className={classes.orders}>
             <ul>

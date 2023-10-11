@@ -8,8 +8,8 @@ const AboutUs = () => {
       <div className={classes.about}>
         <h1>ABOUT</h1>
       </div>
-      <FooterCard>
-        <div>
+      <FooterCard className={classes.style}>
+        <div> 
           <h1>Laptop Galaxy: Empowering Tech Enthusiasts</h1>
           <hr />
           <p>

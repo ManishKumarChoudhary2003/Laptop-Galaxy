@@ -8,7 +8,7 @@ const Conditions = () => {
       <div className={classes.conditions}>
         <h1>TERMS AND CONDITIONS</h1>
       </div>
-      <FooterCard>
+      <FooterCard className={classes.style}>
         <div>
           <h1>Terms and Conditions</h1>
           <p>

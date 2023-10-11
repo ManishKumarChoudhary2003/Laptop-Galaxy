@@ -9,7 +9,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+.laptopsLoading{
+    margin-top: 100px;
+    text-align: center; 
+    font-size: 50px;
+    font-weight: bold;
+}
 .content {
     position: fixed;
     top: 0;
