@@ -27,8 +27,11 @@ const Cart = () => {
       name: cartItems.name,
       currentDate:cartItems.currentDate,
     };
-
-    navigate(`/checkout`, { state: { orderedData: data } });
+    if(isLoggedIn){
+      navigate(`/checkout`, { state: { orderedData: data } });
+    }else{
+      navigate("/auth")
+    }
   };
 
 
@@ -92,8 +95,8 @@ const Cart = () => {
         ))}
       </ul>
       <div className={classes.button_control}>
-        <button onClick={backHandler}>Back</button>
-        <button disabled={!isLoggedIn} onClick={detailsHandler}>Checkout</button>
+        <button onClick={backHandler} >Back</button>
+        <button onClick={detailsHandler}>Checkout</button>
       </div>
     </ShoppingCard>
   );

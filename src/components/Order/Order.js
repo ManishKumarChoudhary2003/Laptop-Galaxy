@@ -188,7 +188,8 @@
 //           </h1>
 //         )} */}
 
-import { useLocation } from "react-router-dom";
+
+
 import OrderItem from "./OrderItem";
 import React, { useState, useEffect, Fragment } from "react";
 import classes from "./Order.module.css";
@@ -266,14 +267,14 @@ const Order = () => {
           placeholder="Enter Your Laptop"
         />
       </div>
-      <section className={classes.orders}>
-        {isLoading && <p>Loading....</p>}
+      <section>
+        {isLoading && <p className={classes.ordersLoading}>Loading....</p>}
         {httpError && <p>{httpError}</p>}
         {!isLoading && !httpError && (
-          <OrderCard>
+          <OrderCard  className={classes.orders}>
             <ul>
               {filteredOrders.length > 0 ? (
-                filteredOrders.map((order) => (
+                filteredOrders.reverse().map((order) => (
                   <OrderItem
                     key={order.id}
                     name={order.name}

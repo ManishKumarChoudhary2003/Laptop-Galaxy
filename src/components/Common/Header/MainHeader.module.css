@@ -8,17 +8,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #741188; 
+    background: #e6e2e2; 
     margin-bottom: 500px;
     z-index: 10;
     /* padding: 0 2rem; */
   }
   
   .main-header h1 { 
+    font-size: 2.5rem;
     margin-left: 3rem;
-    color: white;
+    color: #706363;
   }
 
   .content {
     padding-top: 5rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .main-header {
+      height: 3rem; /* Reduce the height for mobile */
+    }
+  
+    .main-header h1 {
+      font-size: 1.5rem; /* Adjust font size for mobile */
+      margin-left: 1rem; /* Adjust margin for mobile */
+    }
+  }
+  

@@ -1,9 +1,9 @@
 .item {
   margin: 1rem 0;
-  background-color: rgb(217, 225, 232);
+  background-color: #d9e1e8;
   padding: 1rem;
   color: black;
-  animation: orders-appear 1s ease-out forwards;
+  animation: cart-appear 1s ease-out forwards;
 }
 
 .item p {
@@ -56,12 +56,12 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #4b4b4b;
+  background-color: #e5e2e2;
   color: white;
 }
 
   
-@keyframes orders-appear {
+@keyframes cart-appear {
   from {
     opacity: 0;
     transform: translateY(3rem);

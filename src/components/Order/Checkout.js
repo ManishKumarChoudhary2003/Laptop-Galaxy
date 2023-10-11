@@ -553,17 +553,16 @@ const Checkout = (props) => {
           </div>
 
           <div className={classes.actions}>
-            <Button
+            <button
               disabled={!formIsValid}
               type="submit"
               onClick={() => {
                 onConfirmOrders();
                 onCheckoutHandler();
               }}
-              className={classes.btn}
             >
               Confirm Order
-            </Button>
+            </button>
           </div>
         </form>
       </LoginCard>

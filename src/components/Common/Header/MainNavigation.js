@@ -9,8 +9,6 @@ const MainNavigation = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.ui.isLoggedIn);
 
-
-
   const handleLogout = () => {
     const deleteUserData = async () => {
       try {
@@ -36,12 +34,12 @@ const MainNavigation = () => {
     };
 
     deleteUserData();
-    dispatch(uiActions.logoutHandler())
+    dispatch(uiActions.logoutHandler());
   };
   return (
     <nav className={classes.nav}>
       <ul>
-        <li>
+        <li className={classes.list}>
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -58,7 +56,6 @@ const MainNavigation = () => {
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
-            end
           >
             Product
           </NavLink>
@@ -70,7 +67,6 @@ const MainNavigation = () => {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              end
             >
               Register
             </NavLink>
@@ -83,13 +79,12 @@ const MainNavigation = () => {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              end
             >
               Orders
             </NavLink>
           </li>
         )}
-       
+
         {isLoggedIn && (
           <li>
             <NavLink
@@ -97,9 +92,8 @@ const MainNavigation = () => {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              end
             >
-              <Button onClick={handleLogout}>Logout</Button>
+              <p onClick={handleLogout}>Logout</p>
             </NavLink>
           </li>
         )}
@@ -109,7 +103,6 @@ const MainNavigation = () => {
             className={({ isActive }) =>
               isActive ? classes.active : undefined
             }
-            end
           >
             <CartButton />
           </NavLink>

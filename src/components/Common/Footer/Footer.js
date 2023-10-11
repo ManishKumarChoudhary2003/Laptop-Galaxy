@@ -9,13 +9,13 @@ const Footer = () => {
         <div className={classes.items}>
           <div>
             <div className={classes.company_legal_social}>COMPANY</div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
               <Link to="aboutus">ABOUT US</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
               <Link to="faq">FAQ</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
               <Link to="contact">CONTACT US</Link>
             </div>
           </div>
@@ -24,13 +24,13 @@ const Footer = () => {
         <div className={classes.items}>
           <div>
             <div className={classes.company_legal_social}>LEGAL</div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
               <Link to="conditions">TERMS & CONDITIONS</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
             <Link to="privacy">PRIVACY</Link>
             </div>
-            <div className={classes.company_legal_social_itmes}>
+            <div className={classes.company_legal_social_items}>
               <Link to="disclaimer">DISCLAIMER</Link>
             </div>
           </div>
@@ -39,9 +39,15 @@ const Footer = () => {
         <div className={classes.items}>
           <div>
             <div className={classes.company_legal_social}>SOCIAL MEDIA</div>
-            <div className={classes.company_legal_social_itmes}>INSTAGRAM</div>
-            <div className={classes.company_legal_social_itmes}>LINKEDLN</div>
-            <div className={classes.company_legal_social_itmes}>YOUTUBE</div>
+            <div className={classes.company_legal_social_items}>
+              <a href="">INSTAGRAM</a>
+            </div>
+            <div className={classes.company_legal_social_items}>
+              <a href="">LINKEDLN</a>
+            </div>
+            <div className={classes.company_legal_social_items}>
+              <a href="">YOUTUBE</a>
+            </div>
           </div>
         </div>
       </div>

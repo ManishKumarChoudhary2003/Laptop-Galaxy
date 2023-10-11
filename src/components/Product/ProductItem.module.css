@@ -132,8 +132,8 @@ button:hover {
 
 .add_button {
     font: inherit;
-    border: 1px solid #4f005f;
-    background: #de8650;
+    border: 1px solid #2a282a;
+    background: #e2a076;
     color: white;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
@@ -145,8 +145,8 @@ button:hover {
 
 .add_button:hover,
 .add_button:active {
-    background: #a96db5;
-    border-color: #af13ce;
+    background: #f1eef1;
+    border-color: #292928;
     transform: scale(1.02);
 }
 

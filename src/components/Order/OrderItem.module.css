@@ -1,11 +1,11 @@
 /* OrderItem.module.css */
 .item {
   list-style: none;
-  margin: 10px 0;
+  margin: 10px 0; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  background-color: rgb(217, 225, 232);
+  background-color: d9e1e8;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
 }
 

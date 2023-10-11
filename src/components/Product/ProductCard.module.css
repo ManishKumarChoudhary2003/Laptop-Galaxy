@@ -68,6 +68,13 @@
     padding: 5px;
 }
 
+@media screen and (max-width: 768px) {
+    .content {
+       flex-direction: column;
+       margin-top: 45px;
+    }
+}
+
 /* 
 .content {
     margin: 0px;

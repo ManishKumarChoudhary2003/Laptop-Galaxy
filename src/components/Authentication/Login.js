@@ -150,14 +150,14 @@ const Login = (props) => {
           onBlur={validatePasswordHandler}
         />
         <div className={classes.actions}>
-          <Button
+          <button
             disabled={!formIsValid}
             type="submit"
             onClick={onAddLoginHandler}
             className={classes.btn}
           >
             REGISTER
-          </Button>
+          </button>
         </div>
       </form>
     </LoginCard></Fragment>

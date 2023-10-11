@@ -49,8 +49,8 @@
 
 
    .cart {
-    max-width: 30rem;
-    background-color: #268b10;
+    max-width: 40rem;
+    /* background-color: #268b10; */
     color: white;
   }
   
@@ -70,3 +70,40 @@
     display: flex;
     justify-content: space-around;
   }
+
+
+  
+button {
+  font: inherit;
+  border: 1px solid #1a191a;
+  background: #daa889;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  margin-top: 5px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+button:hover,
+button:active {
+  background: #f1eef1;
+  border-color: #d1cdd2;
+  transform: scale(1.02);
+  color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #ac9b9b;
+  cursor: not-allowed;
+}

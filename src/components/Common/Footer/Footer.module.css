@@ -1,8 +1,9 @@
 .main_container {
-    background-color: rgb(252, 249, 246);
+    /* background-color: rgb(252, 249, 246); */
+    background-color: rgb(41, 40, 40);
     /* border: 2px solid red;   */
     position: relative;
-    height: 250px;
+    height: 500px;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(3, 1fr);
@@ -14,28 +15,30 @@
     justify-content: center;
     align-items: flex-start;
     /* margin-top: 10px; */
-    padding-top: 30px;
+    padding-top: 80px; 
 }
 
 .company_legal_social {
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 50px; 
+    color: #847973;
 }
 
-.company_legal_social_itmes {
-    margin-top: 20px;
-    color: blue;
+.company_legal_social_items {
+    margin-top: 20px; 
 }
 
 a {
     text-decoration: none;
+    font-family: sans-serif;
+    color: white;
 }
 
-.company_legal_social_itmes:hover {
+a:hover {
     color: #6057bd;
-    cursor: pointer;
-    text-decoration: underline;
+    cursor: pointer; 
+    /* text-decoration: underline; */
 }
 
 .copy {
@@ -44,8 +47,12 @@ a {
     margin-top: 10px;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .main_container {
-        grid-template-rows: repeat(3,1fr);
+        display: flex;
+       flex-direction: column;
+       height: 1000px;
+       margin-top: 0px;
+       padding-top: 0px;
     }
-} */
+}

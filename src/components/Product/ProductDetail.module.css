@@ -9,6 +9,7 @@
     height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: product-appear 1s ease-out forwards;
 }
 
 .image_button {
@@ -68,11 +69,11 @@
 .btn button{
   font-size:20px;
   font-family:Arial;
-  width:134px;
+  width:170px;
   height:48px;
   border-width:3px;
   color:#fff;
-  border-color:#eeb44f;
+  border-color:#e2a076;
   font-weight:bold;
   border-top-left-radius:13px;
   border-top-right-radius:13px;
@@ -87,7 +88,17 @@ button:hover {
   background: linear-gradient(#96938f, #9c9791);
 }
               
-
+@keyframes product-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* .btn button:hover,
 .btn button:active {
