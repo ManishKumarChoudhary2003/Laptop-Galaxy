@@ -47,7 +47,7 @@
 
 .actions button {
   border: 1px solid black;
-  background-color: transparent; 
+  background-color: transparent;
   margin-left: 0.5rem;
   font-weight: bold;
   padding: 0.15rem 1rem;
@@ -60,7 +60,7 @@
   color: white;
 }
 
-  
+
 @keyframes cart-appear {
   from {
     opacity: 0;

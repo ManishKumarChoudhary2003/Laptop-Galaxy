@@ -11,7 +11,7 @@ import Privacy from "./components/Common/Footer/FooterContent/Privacy";
 import Disclaimer from "./components/Common/Footer/FooterContent/Disclaimer";
 import AuthenticationPage from "./pages/Authentication";
 import ErrorPage from "./pages/Error";
-import ProductDetail from "./components/Product/ProductDetail"; 
+import ProductDetail from "./components/Product/ProductDetail";
 import CartPage from "./pages/Cart";
 import Order from "./components/Order/Order";
 import Checkout from "./components/Order/Checkout";
@@ -36,31 +36,17 @@ function App() {
           element: <ProductDetail />,
         },
         {
-          path : "cartdata",
-          element : <CartPage/>
+          path: "cartdata",
+          element: <CartPage />,
         },
         {
-          path : "orders",
-          element : <Order/>
+          path: "orders",
+          element: <Order />,
         },
         {
-          path : "checkout",
-          element : <Checkout />
+          path: "checkout",
+          element: <Checkout />,
         },
-        // {
-        //   path: "product",
-        //   element: <ProductCard />,
-        //   children : [
-        //     {
-        //       index : true,
-        //       element : <ProductCard />,
-        //     },
-        //     {
-        //       path:":productId",
-        //       element: <ProductDetail />,
-        //     }
-        //   ]
-        // },
         {
           path: "auth",
           element: <AuthenticationPage />,

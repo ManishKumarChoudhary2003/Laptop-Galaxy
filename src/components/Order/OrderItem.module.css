@@ -1,7 +1,6 @@
-/* OrderItem.module.css */
 .item {
   list-style: none;
-  margin: 10px 0; 
+  margin: 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -24,23 +23,24 @@
   font-size: 20px;
 }
 
-.foot{
+.foot {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
-.foot .control_price{
+.foot .control_price {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
- span {
+span {
   margin-left: 20px;
   margin-top: 10px;
   flex-grow: 1;
   font-weight: bold;
 }
-.ratings_qnty{
+
+.ratings_qnty {
   margin-top: 20px;
   font-weight: bold;
   font-size: 15px;
@@ -52,124 +52,9 @@
   font-size: 15px;
 }
 
-/* .item .itemprice {
-  font-weight: normal;
-} */
+
 
 .details {
   margin-top: 10px;
   font-size: 15px;
-} 
-
-
-/* .item {
-  margin: 1rem 0;
-  background-color: #575757;
-  padding: 1rem;
 }
-
-.item p {
-  margin: 0 2rem 1.5rem 0;
-  font-size: 1.01rem;
-}
-
-.item header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.quantity span {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.itemprice {
-  font-weight: normal;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0.5rem 0;
-}
-
-.actions button {
-  background-color: transparent;
-  border: 1px solid white;
-  margin-left: 0.5rem;
-  padding: 0.15rem 1rem;
-  color: white;
-}
-
-.actions button:hover,
-.actions button:active {
-  background-color: #4b4b4b;
-  color: white;
-} */
-
-/* 
-.orderList {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .orderList h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .orderList ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .orderList li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .orderList img {
-    max-width: 100px;
-    max-height: 100px;
-  }
-  
-  .orderList p {
-    margin: 0;
-  } */
-
-/* Add animation */
-/* @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .orderList li {
-    animation: slideIn 0.5s ease-in-out;
-  } */

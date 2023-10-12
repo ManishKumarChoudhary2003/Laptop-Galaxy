@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./ProductDetail.module.css";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
-
 const ProductDetail = () => {
-  const [quantity, setQuantity] = useState(0);
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -16,27 +14,17 @@ const ProductDetail = () => {
     navigate(-1);
   };
 
-  // const handleIncrement = () => {
-  //   setQuantity(quantity + 1);
-  // };
-
-  // const handleDecrement = () => {
-  //   if (quantity > 0) {
-  //     setQuantity(quantity - 1);
-  //   }
-  // };
-
   const addItemHandler = () => {
     dispatch(
       cartActions.addItemToCart({
-        id:laptopData.id,
-        name:laptopData.name,
-        price:laptopData.price,
-        ratings:laptopData.ratings,
-        image:laptopData.image,
-        details:laptopData.details,
-        brand : laptopData.brand,
-        currentDate:laptopData.currentDate,
+        id: laptopData.id,
+        name: laptopData.name,
+        price: laptopData.price,
+        ratings: laptopData.ratings,
+        image: laptopData.image,
+        details: laptopData.details,
+        brand: laptopData.brand,
+        currentDate: laptopData.currentDate,
       })
     );
   };
@@ -63,34 +51,6 @@ const ProductDetail = () => {
           <div className={classes.btn2}>
             <button onClick={addItemHandler}>Add To Cart</button>
           </div>
-          {/* <div className={classes.btn2}>
-            <button onClick={handleDecrement}>-</button>
-          </div>
-          <div className={classes.btn2}>
-            <span className={classes.quantity}>{quantity}</span>
-          </div>
-          <div className={classes.btn2}>
-            <button onClick={handleIncrement}>+</button>
-          </div> */}
-
-
-          {/* <div className={classes.btn2}>
-            <NavLink to="/">
-            <button>CHECKOUT</button>
-            </NavLink>
-          </div> */}
-
-
-
-
-          {/* <div className={classes.quantity_controls}>
-              <button onClick={handleDecrement}>-</button>
-              <span className={classes.quantity}>{quantity}</span>
-              <button onClick={handleIncrement}>+</button>
-            </div> */}
-
-
-
         </div>
       </div>
 

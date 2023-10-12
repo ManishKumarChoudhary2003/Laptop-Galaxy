@@ -9,7 +9,7 @@ const AboutUs = () => {
         <h1>ABOUT</h1>
       </div>
       <FooterCard className={classes.style}>
-        <div> 
+        <div>
           <h1>Laptop Galaxy: Empowering Tech Enthusiasts</h1>
           <hr />
           <p>
@@ -98,7 +98,7 @@ const AboutUs = () => {
             franchises, with exclusive rights to manage and expand the brand
             globally. For any franchise-related inquiries or information, please
             reach out to us directly at
-            <a href="/"> cmanishkumar193@gmail.com</a>  
+            <a href="/"> cmanishkumar193@gmail.com</a>
           </p>
           <p>
             Galaxy TechWorks and its team are committed to maintaining the

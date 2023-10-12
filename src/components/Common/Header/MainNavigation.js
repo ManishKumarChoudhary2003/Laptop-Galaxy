@@ -3,7 +3,6 @@ import classes from "./MainNavigation.module.css";
 import CartButton from "../../Cart/CartButton";
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../../store/ui-slice";
-import Button from "../../UI/Button";
 
 const MainNavigation = () => {
   const dispatch = useDispatch();

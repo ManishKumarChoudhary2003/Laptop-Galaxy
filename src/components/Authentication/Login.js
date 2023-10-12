@@ -1,8 +1,13 @@
-import React, { Fragment, useEffect, useReducer, useRef, useState } from "react";
+import React, {
+  Fragment,
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
 import { useNavigate } from "react-router-dom";
 import LoginCard from "../UI/LoginCard";
 import classes from "./Login.module.css";
-import Button from "../UI/Button";
 import Input from "../UI/Input";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
@@ -53,17 +58,17 @@ const Login = (props) => {
       Email: emailState.value,
       Password: passwordState.value,
     };
-    
+
     const savedLoginData = await fetch(
-        "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_saved_login.json",
-        {
-          method: "POST",
-          body: JSON.stringify(detailsLogin),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_saved_login.json",
+      {
+        method: "POST",
+        body: JSON.stringify(detailsLogin),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const response = await fetch(
       "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_login.json",
       {
@@ -77,18 +82,14 @@ const Login = (props) => {
     const data = await response.json();
     dispatch(uiActions.loginHandler());
     navigate("/product");
-
-    
   }
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("Checking form validity");
       setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
 
     return () => {
-      console.log("CLEANUP");
       clearTimeout(identifier);
     };
   }, [emailIsValid, passwordIsValid]);
@@ -123,44 +124,45 @@ const Login = (props) => {
 
   return (
     <Fragment>
-    <div className={classes.register}>
+      <div className={classes.register}>
         <p>You Can Register Now</p>
         <hr />
-    </div>
-    <LoginCard className={classes.login}>
-      <form onSubmit={submitHandler}>
-        <Input
-          ref={emailInputRef}
-          id="email"
-          label="E-Mail"
-          type="email"
-          isValid={emailIsValid}
-          value={emailState.value}
-          onChange={emailChangeHandler}
-          onBlur={validateEmailHandler}
-        />
-        <Input
-          ref={passwordInputRef}
-          id="password"
-          label="Password"
-          type="password"
-          isValid={passwordIsValid}
-          value={passwordState.value}
-          onChange={passwordChangeHandler}
-          onBlur={validatePasswordHandler}
-        />
-        <div className={classes.actions}>
-          <button
-            disabled={!formIsValid}
-            type="submit"
-            onClick={onAddLoginHandler}
-            className={classes.btn}
-          >
-            REGISTER
-          </button>
-        </div>
-      </form>
-    </LoginCard></Fragment>
+      </div>
+      <LoginCard className={classes.login}>
+        <form onSubmit={submitHandler}>
+          <Input
+            ref={emailInputRef}
+            id="email"
+            label="E-Mail"
+            type="email"
+            isValid={emailIsValid}
+            value={emailState.value}
+            onChange={emailChangeHandler}
+            onBlur={validateEmailHandler}
+          />
+          <Input
+            ref={passwordInputRef}
+            id="password"
+            label="Password"
+            type="password"
+            isValid={passwordIsValid}
+            value={passwordState.value}
+            onChange={passwordChangeHandler}
+            onBlur={validatePasswordHandler}
+          />
+          <div className={classes.actions}>
+            <button
+              disabled={!formIsValid}
+              type="submit"
+              onClick={onAddLoginHandler}
+              className={classes.btn}
+            >
+              REGISTER
+            </button>
+          </div>
+        </form>
+      </LoginCard>
+    </Fragment>
   );
 };
 

@@ -1,68 +1,68 @@
 .order {
-    width: 90%;
-    max-width: 40rem;
-    margin: 2rem auto;
-    margin-top: 20px;
-    margin-bottom: 200px;
-    padding: 2rem;
-    animation: checkout-appear 1s ease-out forwards;
-  }
-  
-  .actions {
-    text-align: center;
-  }
-  
+  width: 90%;
+  max-width: 40rem;
+  margin: 2rem auto;
+  margin-top: 20px;
+  margin-bottom: 200px;
+  padding: 2rem;
+  animation: checkout-appear 1s ease-out forwards;
+}
 
-  .confirm p{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: bold;
+.actions {
+  text-align: center;
+}
+
+
+.confirm p {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+@keyframes checkout-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
   }
 
-  @keyframes checkout-appear {
-    from {
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
 button {
-    font: inherit;
-    border: 1px solid #2a282a;
-    background: #e2a076;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    font-size: 1.05rem;
-    margin-top: 5px;
-    border-radius: 30px;
-    transition: transform 0.3s ease;
+  font: inherit;
+  border: 1px solid #2a282a;
+  background: #e2a076;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.05rem;
+  margin-top: 5px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
 }
 
 button:hover,
 button:active {
-    background: #e3e1de;
-    border-color: #292928;
-    transform: scale(1.02);
+  background: #e3e1de;
+  border-color: #292928;
+  transform: scale(1.02);
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button:disabled,
 button:focus:disabled,
 button:hover:disabled,
 button:active:disabled {
-    background: #ccc;
-    border-color: #ccc;
-    color: #ac9b9b;
-    cursor: not-allowed;
+  background: #ccc;
+  border-color: #ccc;
+  color: #ac9b9b;
+  cursor: not-allowed;
 }

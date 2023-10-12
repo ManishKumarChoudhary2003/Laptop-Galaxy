@@ -45,8 +45,10 @@ const CartItem = (props) => {
         <header>
           <p>{name}</p>
           <div className={classes.price}>
-        ₹{total.toFixed(2)}
-            <span className={classes.itemprice}>(₹{price.toFixed(2)}/item)</span>
+            ₹{total.toFixed(2)}
+            <span className={classes.itemprice}>
+              (₹{price.toFixed(2)}/item)
+            </span>
           </div>
         </header>
         <div className={classes.details}>

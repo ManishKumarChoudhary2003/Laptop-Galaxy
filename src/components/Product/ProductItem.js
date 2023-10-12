@@ -1,33 +1,16 @@
 import classes from "./ProductItem.module.css";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 
 const ProductItem = (props) => {
-  // const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.ui.isLoggedIn);
 
-  // const handleIncrement = () => {
-  //   setQuantity(quantity + 1);
-  // };
-
-  // const handleDecrement = () => {
-  //   if (quantity > 1) {
-  //     setQuantity(quantity - 1);
-  //   }
-  // };
-
-  // const addToCartHandler = () =>{
-  //   dispatch(cartActions.addItemToCart(props.id))
-  // }
-  const { name, price, id, image, ratings, details, brand, currentDate } = props;
+  const { name, price, id, image, ratings, details, brand, currentDate } =
+    props;
 
   const addToCartHandler = () => {
-    // and then send Http request
-    // fetch('firebase-url', { method: 'POST', body: JSON.stringify(newCart) })
-
     dispatch(
       cartActions.addItemToCart({
         id,
@@ -40,8 +23,6 @@ const ProductItem = (props) => {
         currentDate,
       })
     );
-
-    // dispatch(cartActions.cartItemAddingHandler());
   };
 
   const detailsHandler = () => {
@@ -53,7 +34,7 @@ const ProductItem = (props) => {
       ratings: props.ratings,
       details: props.details,
       name: props.name,
-      currentDate:props.currentDate,
+      currentDate: props.currentDate,
     };
 
     navigate(`/product/${props.id}`, { state: { laptopData: data } });
@@ -73,21 +54,12 @@ const ProductItem = (props) => {
             <div className={classes.ratings}>
               <p>★{props.ratings}</p>
             </div>
-
-            {/* <div className={classes.quantity_controls}>
-              <button onClick={handleDecrement}>-</button>
-              <span className={classes.quantity}>{quantity}</span>
-              <button onClick={handleIncrement}>+</button>
-            </div> */}
           </div>
           <div className={classes.ratings}>
             <button className={classes.add_button} onClick={addToCartHandler}>
               Add to Cart
             </button>
-            <button
-              className={classes.add_button}
-              onClick={detailsHandler}
-            >
+            <button className={classes.add_button} onClick={detailsHandler}>
               Buy Now
             </button>
           </div>

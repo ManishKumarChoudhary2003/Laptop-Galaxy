@@ -8,7 +8,6 @@ import React, {
 import { useNavigate, useLocation } from "react-router-dom";
 import LoginCard from "../UI/LoginCard";
 import classes from "./Checkout.module.css";
-import Button from "../UI/Button";
 import Input from "../UI/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
@@ -217,17 +216,6 @@ const Checkout = (props) => {
       ModeOfPayment: selectedOption,
     };
 
-    // const savedLoginData = await fetch(
-    //     "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_saved_login.json",
-    //     {
-    //       method: "POST",
-    //       body: JSON.stringify(detailsLogin),
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //     }
-    //   );
-
     const response = await fetch(
       "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/usersData.json",
       {
@@ -253,7 +241,7 @@ const Checkout = (props) => {
           price: item.price,
           quantity: item.quantity,
           image: item.image,
-          brand : item.brand,
+          brand: item.brand,
           details: item.details,
           totalPrice: item.totalPrice,
           currentDate: item.currentDate,
@@ -284,7 +272,6 @@ const Checkout = (props) => {
 
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("Checking form validity");
       setFormIsValid(
         firstNameIsValid &&
           lastNameIsValid &&
@@ -299,7 +286,6 @@ const Checkout = (props) => {
     }, 500);
 
     return () => {
-      console.log("CLEANUP");
       clearTimeout(identifier);
     };
   }, [
@@ -381,9 +367,7 @@ const Checkout = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (formIsValid) {
-        openModal();
-      //   dispatch(uiActions.loginHandler());
-      //   dispatch(uiActions.logout());
+      openModal();
     } else if (!firstNameIsValid) {
       firstNameRef.current.focus();
     } else if (!lastNameIsValid) {
@@ -567,10 +551,7 @@ const Checkout = (props) => {
         </form>
       </LoginCard>
       {isModalOpen && (
-        <Modal
-          message="Order confirmed successfully!"
-          onClose={closeModal}
-        />
+        <Modal message="Order confirmed successfully!" onClose={closeModal} />
       )}
     </Fragment>
   );
