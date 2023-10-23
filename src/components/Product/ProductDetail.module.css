@@ -147,3 +147,58 @@ button:hover {
 .offers p {
     font-size: 13px;
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        text-align: center;
+        width: auto;
+        height: auto;
+        box-shadow: 0 0px 0px rgba(11, 9, 9, 0.26);
+    }
+
+    .image_button {
+        display: none;
+    }
+
+    .details {
+        grid-template-rows: auto;
+        text-align: center;
+        box-shadow: none;
+        background-color: white;
+    }
+
+
+    .name h3 {
+        font-size: 1rem;
+    }
+
+    .ratings {
+        justify-content: center;
+    }
+
+    .ratings p {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .price h2 {
+        font-size: 1.2rem;
+    }
+
+    .price p {
+        font-size: 0.8rem;
+    }
+
+    .offers {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .offers h3 {
+        font-size: 1rem;
+    }
+
+    .offers p {
+        font-size: 0.8rem;
+    }
+}

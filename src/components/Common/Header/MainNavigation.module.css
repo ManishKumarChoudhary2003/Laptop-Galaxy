@@ -50,11 +50,12 @@
     display: grid;
     grid-gap: 0px;
     flex-direction: column;
-    height: 10rem;
-    margin-right: 50px;
+    height: 15rem;
+    margin-right: 0px;
   }
 
   .nav li {
+    margin-top: 0rem;
     font-size: 1rem;
     margin-left: 0;
     margin-bottom: 1rem;

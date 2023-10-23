@@ -164,3 +164,51 @@ add_button:active:disabled {
     color: #ac9b9b;
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 768px) {
+    .card { 
+        width: auto;
+        height: auto; 
+        margin: 10px 0;
+        text-align: left;
+        padding: 10px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+      }
+      
+      .card img {
+        width: 200px; 
+        height: auto;
+      }
+      
+
+    .price_container{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .card_content_name {
+        font-size: 0.6rem; 
+        white-space: normal; 
+      }
+      
+      .price {
+        font-size: 1rem; 
+      }
+      
+  
+    .ratings {
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .add_button {
+      font-size: 1rem; 
+      padding: 0.3rem 0.6rem; 
+      margin-top: 10px;
+    }
+  }
+  
+  

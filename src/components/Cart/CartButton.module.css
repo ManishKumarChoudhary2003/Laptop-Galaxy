@@ -5,6 +5,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 0px;
   transition: background-color 0.3s ease;
 }
 
@@ -36,6 +37,6 @@
 
 @media screen and (max-width: 768px) {
   .cart-button {
-    display: none;
+    margin-top: 0px;
   }
 }
