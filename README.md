@@ -2,7 +2,7 @@
 
 An E-Commerce website for ordering Laptops Online.
 
-## Demo 
+# Demo 
 
 
 https://github.com/Manishkumarchoudhary2003/Laptop-Galaxy/assets/107823673/b572c3ef-af5d-4fbd-9d50-9c4814d3d7d7
@@ -11,7 +11,7 @@ https://github.com/Manishkumarchoudhary2003/Laptop-Galaxy/assets/107823673/b572c
 
 **NOTE:** The features shown in the demo are not exhaustive. Only the core features are showcased in the demo.
 
-## Tools Used
+# Tools Used
 
 1. React: To create the Single Page App.
 2. React-Router: For Routing.
@@ -25,7 +25,7 @@ To use the project follow the steps given below:
 2. Setup Firebase Project and configuration
 3. Use npm start to run the react app
 
-## Firebase Setup
+# Firebase Setup
 
 To set up Firebase for your project, you need to create a Firebase configuration in Firebase settings. The required format for making a POST request to Firebase is as follows:
 
