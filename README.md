@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Laptop-Galaxy Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An E-Commerce website for ordering Laptops Online.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+**NOTE:** The features shown in the demo are not exhaustive. Only the core features are showcased in the demo.
 
-### `npm start`
+## Tools Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. React: To create the Single Page App.
+2. React-Router: For Routing.
+3. Redux: For State Management.
+4. Firebase: As a Database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# How to Use
+To use the project follow the steps given below:
 
-### `npm test`
+1. Install the necessary modules (npm install).
+2. Setup Firebase Project and configuration
+3. Use npm start to run the react app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Firebase Setup
 
-### `npm run build`
+To set up Firebase for your project, you need to create a Firebase configuration in Firebase settings. The required format for making a POST request to Firebase is as follows:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+// Login.js
+const response = await fetch(
+  "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptop_galaxy_login.json",
+  {
+    method: "POST",
+    body: JSON.stringify(detailsLogin),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+// Checkout.js - Posting user details
+const response = await fetch(
+  "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/usersData.json",
+  {
+    method: "POST",
+    body: JSON.stringify(userDetails),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+// Checkout.js - Posting order details
+const response = await fetch(
+  "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/Orders.json",
+  {
+    method: "POST",
+    body: JSON.stringify(orderDetails),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
-### `npm run eject`
+// Order.js - Fetching orders
+const response = await fetch(
+  "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/Orders.json"
+);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+// Product.js - Fetching product data
+const response = await fetch(
+  "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptopData.json"
+);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
