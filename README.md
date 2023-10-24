@@ -2,7 +2,12 @@
 
 An E-Commerce website for ordering Laptops Online.
 
-## Demo
+## Demo 
+
+
+https://github.com/Manishkumarchoudhary2003/Laptop-Galaxy/assets/107823673/b572c3ef-af5d-4fbd-9d50-9c4814d3d7d7
+
+
 
 **NOTE:** The features shown in the demo are not exhaustive. Only the core features are showcased in the demo.
 
