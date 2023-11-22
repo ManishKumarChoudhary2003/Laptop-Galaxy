@@ -17,13 +17,13 @@ const ProductCard = () => {
         const response = await fetch(
           "https://laptop-galaxy-37759-default-rtdb.firebaseio.com/laptopData.json"
         );
-
+    
         if (!response.ok) {
           throw new Error("Something went wrong");
         }
-
+    
         const responseData = await response.json();
-
+    
         const loadedLaptops = Object.entries(responseData).map(
           ([key, value]) => ({
             id: Math.random().toString(),

@@ -79,6 +79,7 @@ const Login = (props) => {
         },
       }
     );
+   
     const data = await response.json();
     dispatch(uiActions.loginHandler());
     navigate("/product");
