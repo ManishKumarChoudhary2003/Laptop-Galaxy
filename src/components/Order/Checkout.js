@@ -123,6 +123,8 @@ const Checkout = (props) => {
   const orderedData = location.state && location.state.orderedData;
   const cartItems = useSelector((state) => state.cart.items);
 
+  console.log(orderedData);
+
   const calculateTotalPrice = () => {
     let grandTotal = 0;
     for (const item of cartItems) {
@@ -232,6 +234,7 @@ const Checkout = (props) => {
     const data = await response.json();
     dispatch(uiActions.loginHandler());
     navigate("/");
+    console.log(data);
   }
 
   async function onConfirmOrders() {

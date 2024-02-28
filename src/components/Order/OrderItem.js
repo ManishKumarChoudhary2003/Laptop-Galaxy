@@ -18,6 +18,8 @@ const OrderItem = (props) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  console.log(id,brand);
   
   return (
     <Fragment>

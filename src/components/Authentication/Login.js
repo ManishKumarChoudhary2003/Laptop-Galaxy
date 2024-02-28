@@ -83,6 +83,8 @@ const Login = (props) => {
     const data = await response.json();
     dispatch(uiActions.loginHandler());
     navigate("/product");
+    console.log(data)
+    console.log(savedLoginData);
   }
 
   useEffect(() => {
