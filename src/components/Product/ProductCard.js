@@ -60,17 +60,17 @@ const ProductCard = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-md-12">
-            <div className="d-flex justify-content-between align-items-center mb-4 mt-5">
+            <div className="d-flex justify-content-between  align-items-center mb-4 mt-5">
               <h1 className="mb-0">Products</h1>
               <input
                 type="text"
                 value={searchTerm}
                 onChange={handleSearchChange}
                 placeholder="Search"
-                className="form-control w-25"
+                className="form-control w-25 mb-3"
               />
             </div>
             <hr />

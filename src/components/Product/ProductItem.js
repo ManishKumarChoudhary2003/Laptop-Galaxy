@@ -48,7 +48,7 @@ const ProductItem = (props) => {
 
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 mt-2 mb-3">
-      <div className="card shadow h-100 mt-5 m-1 position-relative">
+      <div className="card shadow h-100 mt-5 m-1 position-relative" style={{backgroundColor : "#eaf2f7"}}>
         <img
           src={props.image}
           className="card-img-top p-2"

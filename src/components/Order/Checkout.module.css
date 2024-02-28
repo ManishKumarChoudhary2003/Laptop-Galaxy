@@ -5,6 +5,7 @@
   margin-top: 20px;
   margin-bottom: 200px;
   padding: 2rem;
+  background-color: #e7f1f8;
   animation: checkout-appear 1s ease-out forwards;
 }
 
@@ -13,8 +14,7 @@
 }
 
 
-.confirm p {
-  margin-top: 100px;
+.confirm p { 
   display: flex;
   justify-content: center;
   font-size: 30px;
@@ -36,7 +36,7 @@
 button {
   font: inherit;
   border: 1px solid #2a282a;
-  background: #e2a076;
+  background: #abdde9;
   color: white;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
@@ -48,8 +48,8 @@ button {
 
 button:hover,
 button:active {
-  background: #e3e1de;
-  border-color: #292928;
+  background: #abdde9;
+  border-color: #ffffff;
   transform: scale(1.02);
 }
 

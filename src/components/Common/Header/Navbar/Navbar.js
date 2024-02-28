@@ -46,7 +46,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{backgroundColor : "#f4f4f5"}}>
+
       <div className="container">
         <NavLink  onClick={closeMenu} className="navbar-brand" to="/">
           Laptop Galaxy
