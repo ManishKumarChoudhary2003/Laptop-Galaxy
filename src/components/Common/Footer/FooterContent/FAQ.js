@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import classes from "./FAQ.module.css";
 import FooterCard from "../../../UI/FooterCard";
 
 const FAQ = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Fragment>
       <div className={classes.faq}>

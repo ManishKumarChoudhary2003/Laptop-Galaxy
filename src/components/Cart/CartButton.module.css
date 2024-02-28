@@ -1,11 +1,10 @@
 .cart-button {
-  display: flex;
+  /* display: flex; */
   background-color: #efe3e3;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0px;
+  /* border-radius: 4px; */
+  cursor: pointer; 
   transition: background-color 0.3s ease;
 }
 
@@ -15,8 +14,7 @@
 }
 
 .cart-icon {
-  font-size: 24px;
-  margin-right: 0px;
+  font-size: 20px; 
 }
 
 .cart-label {
@@ -26,8 +24,8 @@
 
 .badge {
   background-color: #e5e2e2;
-  border-radius: 30px;
-  padding: 0.15rem 1.25rem;
+  /* border-radius: 30px; */
+  /* padding: 0.15rem 1.25rem; */
   color: #1d1d1d;
 }
 
@@ -38,5 +36,6 @@
 @media screen and (max-width: 768px) {
   .cart-button {
     margin-top: 0px;
+    background-color: #d8d2f4;
   }
 }

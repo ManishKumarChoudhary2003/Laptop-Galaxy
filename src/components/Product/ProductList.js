@@ -1,5 +1,11 @@
+
+
+import { useEffect } from "react";
 import ProductItem from "./ProductItem";
 const ProductList = (props) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       {props.laptops.length > 0 &&

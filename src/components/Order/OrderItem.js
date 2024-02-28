@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import classes from "./OrderItem.module.css";
 
 const OrderItem = (props) => {
@@ -14,6 +14,10 @@ const OrderItem = (props) => {
     currentDate,
     quantity,
   } = props;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   
   return (
     <Fragment>

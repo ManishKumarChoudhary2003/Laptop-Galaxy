@@ -182,6 +182,9 @@ const Checkout = (props) => {
     value: "",
     isValid: null,
   });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

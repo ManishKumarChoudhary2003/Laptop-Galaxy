@@ -10,6 +10,10 @@ const Order = () => {
   const [httpError, setHttpError] = useState();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredOrders, setFilteredOrders] = useState([]);
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     const fetchOrders = async () => {

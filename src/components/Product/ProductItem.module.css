@@ -168,10 +168,7 @@ add_button:active:disabled {
 @media screen and (max-width: 768px) {
     .card { 
         width: auto;
-        height: auto; 
-        margin: 10px 0;
-        text-align: left;
-        padding: 10px;
+        height: auto;  
         display: flex;
         flex-direction: column; 
         align-items: center;
@@ -210,5 +207,6 @@ add_button:active:disabled {
       margin-top: 10px;
     }
   }
+  
   
   

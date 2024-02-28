@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import FooterCard from "../../../UI/FooterCard";
 import classes from "./AboutUs.module.css";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Fragment>
       <div className={classes.about}>

@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import classes from "./Conditions.module.css";
 import FooterCard from "../../../UI/FooterCard";
 
 const Conditions = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Fragment>
       <div className={classes.conditions}>
