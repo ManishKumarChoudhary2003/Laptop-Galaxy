@@ -79,13 +79,16 @@ const Login = (props) => {
         },
       }
     );
-   
+
     const data = await response.json();
     dispatch(uiActions.loginHandler());
     navigate("/product");
-    console.log(data)
+    console.log(data);
     console.log(savedLoginData);
   }
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     const identifier = setTimeout(() => {

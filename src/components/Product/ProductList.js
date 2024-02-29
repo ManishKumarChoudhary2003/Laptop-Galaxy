@@ -1,5 +1,3 @@
-
-
 import { useEffect } from "react";
 import ProductItem from "./ProductItem";
 const ProductList = (props) => {
