@@ -97,17 +97,3 @@
     font-size:10px;
   }
 }
-
-/* @media screen and (max-width: 768px) {
-  .head {
-    margin-top: 100px;
-    flex-wrap: wrap;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .para {
-    font-size: 20px;
-    text-align: center;
-  }
-} */
